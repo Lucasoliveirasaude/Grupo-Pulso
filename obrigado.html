@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pelo contato!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            scroll-snap-type: x mandatory;
+            padding: 1rem;
+            animation: scroll 30s linear infinite;
+        }
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+        .carousel-caption {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #4B5563;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-blue-50 min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <div class="bg-white p-8 rounded-xl shadow-md max-w-md mb-10">
+        <h1 class="text-3xl font-bold text-blue-800 mb-4">Obrigado pelo seu contato! 🎉</h1>
+        <p class="text-gray-700 text-lg mb-6">Recebemos suas informações e em breve um de nossos consultores entrará em contato com você.</p>
+        <a href="index.html" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Voltar ao Início</a>
+    </div>
+
+    <div class="w-full max-w-4xl">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Nossos parceiros:</h2>
+        <div class="carousel">
+            <a href="https://www.portoseguro.com.br/planos-de-saude" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Porto_Seguro_Logo.svg/2560px-Porto_Seguro_Logo.svg.png" alt="Porto Seguro" class="h-16">
+                <div class="carousel-caption">Planos a partir de 3 vidas</div>
+            </a>
+            <a href="https://www.unimed.coop.br/" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Unimed_logo.svg/2560px-Unimed_logo.svg.png" alt="Unimed" class="h-16">
+                <div class="carousel-caption">Rede nacional com isenção de carência</div>
+            </a>
+            <a href="https://www.sulamericaseguros.com.br/planos-de-saude" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sulamerica_logo.svg/1200px-Sulamerica_logo.svg.png" alt="SulAmérica" class="h-16">
+                <div class="carousel-caption">Cobertura ampla e flexível</div>
+            </a>
+            <a href="https://www.hapvida.com.br/site/planos" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Logo_Hapvida.svg/2560px-Logo_Hapvida.svg.png" alt="Hapvida" class="h-16">
+                <div class="carousel-caption">Planos acessíveis e regionais</div>
+            </a>
+            <a href="https://www.bradescosaude.com.br/" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Bradesco_Seguros_Logo.svg/1200px-Bradesco_Seguros_Logo.svg.png" alt="Bradesco Saúde" class="h-16">
+                <div class="carousel-caption">Cobertura nacional empresarial</div>
+            </a>
+            <a href="https://www.amil.com.br/" target="_blank" class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Amil_logo.svg/2560px-Amil_logo.svg.png" alt="Amil" class="h-16">
+                <div class="carousel-caption">Planos familiares e empresariais</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
